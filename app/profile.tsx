@@ -108,6 +108,14 @@ const menuItems = [
     color: colors.primary,
   },
   {
+    id: 'image-generator',
+    title: 'AI Image Generator',
+    subtitle: 'Create custom workout images',
+    icon: 'photo.badge.plus',
+    color: '#FF6B6B',
+    route: '/image-generator',
+  },
+  {
     id: 'preferences',
     title: 'Preferences',
     subtitle: 'Workout settings and goals',
@@ -147,7 +155,14 @@ const menuItems = [
 export default function ProfileScreen() {
   const handleMenuPress = (itemId: string) => {
     console.log(`Menu item pressed: ${itemId}`);
-    // Here you would navigate to specific settings screens
+    
+    const item = menuItems.find(menuItem => menuItem.id === itemId);
+    if (item?.route) {
+      router.push(item.route as any);
+    } else {
+      // Handle other menu items that don't have routes yet
+      console.log(`No route defined for ${itemId}`);
+    }
   };
 
   return (

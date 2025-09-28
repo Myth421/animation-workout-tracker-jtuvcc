@@ -1,3 +1,4 @@
+
 import { Stack, router } from "expo-router";
 import React from "react";
 import { ScrollView, StyleSheet, View, Text, Pressable } from "react-native";
@@ -175,6 +176,14 @@ const quickActions = [
     icon: 'plus.circle.fill',
     route: '/create-workout',
     color: colors.success,
+  },
+  {
+    id: 'image-generator',
+    title: 'AI Images',
+    subtitle: 'Generate with AI',
+    icon: 'photo.badge.plus',
+    route: '/image-generator',
+    color: '#FF6B6B',
   },
 ];
 
