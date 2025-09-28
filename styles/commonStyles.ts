@@ -1,14 +1,18 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  primary: '#007AFF',    // iOS Blue
+  secondary: '#34C759',  // iOS Green
+  accent: '#FF9500',     // iOS Orange
+  background: '#FFFFFF', // Light background
+  backgroundAlt: '#F2F2F7', // Light grey background
+  text: '#000000',       // Dark text
+  textSecondary: '#8E8E93', // Grey text
+  grey: '#C7C7CC',       // Light grey
+  card: '#FFFFFF',       // White card background
+  success: '#34C759',
+  warning: '#FF9500',
+  error: '#FF3B30',
 };
 
 export const buttonStyles = StyleSheet.create({
@@ -46,19 +50,30 @@ export const commonStyles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    fontSize: 24,
-    fontWeight: '800',
+    fontSize: 28,
+    fontWeight: '700',
     textAlign: 'center',
     color: colors.text,
-    marginBottom: 10
+    marginBottom: 8
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: colors.text,
+    marginBottom: 16
   },
   text: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: '400',
     color: colors.text,
     marginBottom: 8,
     lineHeight: 24,
-    textAlign: 'center',
+  },
+  textSecondary: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: colors.textSecondary,
+    lineHeight: 20,
   },
   section: {
     width: '100%',
@@ -71,19 +86,34 @@ export const commonStyles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: colors.backgroundAlt,
-    borderColor: colors.grey,
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    padding: 20,
     marginVertical: 8,
     width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+    elevation: 3,
+  },
+  exerciseCard: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    padding: 16,
+    marginVertical: 6,
+    width: '100%',
+    boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.08)',
     elevation: 2,
   },
   icon: {
-    width: 60,
-    height: 60,
-    tintColor: "white",
+    width: 24,
+    height: 24,
+    tintColor: colors.primary,
+  },
+  safeArea: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  screenPadding: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
 });
